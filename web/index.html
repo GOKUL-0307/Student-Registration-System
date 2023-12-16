@@ -1,75 +1,112 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body{
-                display:flex;
-                felx-direction:coloum;
-                align-items: center;
-                justify-content: center;
-                  background-image: url('h4.jpg');
-                  background-size: 110% 110%;
-                  color: white;
-            }
-            .container{
-        display: flex;
-        height:600px;
-        width:500px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+<html lang="en">
+<head>
+    <title>Student Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(109, 206, 119); /* Standard background color */
+            margin: 0;
+            height: 100vh; /* Full viewport height */
+        }
 
-            }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff; /* Container background color */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+        }
 
-      .item{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width:350px;
-        margin:20px;
-        }       
-        </style>
-    </head>
-    <body>
-        
-        
-       <form action="studentdata" method="post">
-            <div class="container">
-                <h1>Student Registration</h1>
-        <div class="item">
-            <label for="Name">Student Name</label>
-            <input type="text" name="Name" id="name">
+        .item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin: 10px 0; /* Adjusted margin for better spacing */
+        }
+
+        label {
+            width: 30%; /* Adjusted label width for better alignment */
+        }
+
+        input {
+            width: 60%; /* Adjusted input width for better alignment */
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        /* Additional style for the link */
+        p {
+            margin-top: 20px; /* Spacing between fields and the link */
+            font-size: 14px;
+        }
+
+        a {
+            color: #3498db; /* Link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 20px; /* Spacing between the link and the button */
+            padding: 10px;
+            background-color: #2ecc71; /* Button background color */
+            color: #ffffff; /* Button text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #27ae60; /* Button background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <form action="studentdata" method="post">
+        <div class="container">
+            <h1>Student Registration</h1>
+            <div class="item">
+                <label for="Name">Student Name</label>
+                <input type="text" name="Name" id="name">
+            </div>
+            <div class="item">
+                <label for="Regno">Registration Number</label>
+                <input type="text" name="Regno" id="regno">
+            </div>
+            <div class="item">
+                <label for="Dept">Department</label>
+                <input type="text" name="Dept" id="dept">
+            </div>
+            <div class="item">
+                <label for="Year">Year</label>
+                <input type="text" name="Year" id="year">
+            </div>
+            <div class="item">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="usename">
+            </div>
+            <div class="item">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="pwd">
+            </div>
+            
+            <!-- Link to the Login Page -->
+            <p>Already have an account? <a href="./Login.html">Login</a></p>
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
         </div>
-        <div class="item">
-            <label for="Regno">Registration Number</label>
-            <input type="text" name="Regno" id="regno">
-        </div>
-        <div class="item">
-            <label for="Dept">Department</label>
-            <input type="text" name="Dept" id="dept">
-        </div>
-        <div class="item">
-            <label for="Year">Year</label>
-            <input type="text" name="Year" id="year">
-        </div>
-        <div class="item">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="usename">
-        </div>
-        <div class="item">
-            <label for="password">Password</label>
-            <input type="text" name="password" id="pwd">
-        </div>
-        <button type="submit">Register</button>
-    </div>
-        </form>
-    </body>
+    </form>
+</body>
 </html>
